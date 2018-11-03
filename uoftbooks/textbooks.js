@@ -89,7 +89,7 @@ function getDiscount() {
           json = JSON.parse(this.responseText);
       }
   };
-  xmlhttp.open("GET", 'https://muradakh.github.io/uoftbooks/discounttb.json', false);
+  xmlhttp.open("GET", 'https://murad-akh.ca/uoftbooks/discounttb.json', false);
   xmlhttp.send();
   return json;
 }
