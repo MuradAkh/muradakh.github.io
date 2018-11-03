@@ -82,22 +82,21 @@ function displayBooks(json, query) {
 
 
 function getDiscount() {
-    var dir;
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            dir = JSON.parse(this.responseText);
-        }
-    };
-    xmlhttp.open("GET", chrome.runtime.getURL("discounttb.json"), false);
-    xmlhttp.send();
-    return dir;
+  let json = [];
+  let xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+          json = JSON.parse(this.responseText);
+      }
+  };
+  xmlhttp.open("GET", 'https://muradakh.github.io/uoftbooks/discounttb.json', false);
+  xmlhttp.send();
+  return json;
 }
 
 
 function addDbook(isbn) {
-    let discount = getDiscount();
+    let discount = {}
     let output = '<b>Discount Textbooks Store</b><br/>';
     if (discount[isbn] == null) {
         output += 'Not found <br/>';
