@@ -96,7 +96,7 @@ function getDiscount() {
 
 
 function addDbook(isbn) {
-    let discount = {}
+    let discount = getDiscount();
     let output = '<b>Discount Textbooks Store</b><br/>';
     if (discount[isbn] == null) {
         output += 'Not found <br/>';
