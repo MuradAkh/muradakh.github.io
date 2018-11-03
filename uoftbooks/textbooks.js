@@ -40,7 +40,7 @@ function fetcher(query) {
             json = JSON.parse(this.responseText);
         }
     };
-    xmlhttp.open("GET", 'https://cors.io/https://cobalt.qas.im/api/1.0/textbooks/' + query + '&key=bolBkU4DDtKmXbbr4j5b0m814s3RCcBm&limit=100', false);
+    xmlhttp.open("GET", 'https://cors.io/?https://cobalt.qas.im/api/1.0/textbooks/' + query + '&key=bolBkU4DDtKmXbbr4j5b0m814s3RCcBm&limit=100', false);
     xmlhttp.send();
     return json;
 }
