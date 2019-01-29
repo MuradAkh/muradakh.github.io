@@ -1,9 +1,10 @@
 (function () {
     let url = window.location.href;
+    console.log(url);
     url.replace("/cinfo", "/");
     url.replace("murad-akh.ca/textbooks", "courseinfo.murad-akh.ca/uoftbooks")
     window.location.href = url;
-});
+})();
 
 
 // const FB_URL = 'https://www.facebook.com/groups/183712131723915/for_sale_search/?forsalesearchtype=for_sale&availability=available&query=';
