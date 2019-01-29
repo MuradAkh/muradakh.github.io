@@ -1,7 +1,8 @@
 (function () {
     let url = window.location.href;
     url.replace("/cinfo", "/");
-    url.replace("murad-akh.ca/text", "courseinfo.murad-akh.ca/text")
+    url.replace("murad-akh.ca/textbooks", "courseinfo.murad-akh.ca/uoftbooks")
+    window.location.href = url;
 });
 
 
